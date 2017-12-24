@@ -1,13 +1,10 @@
-import { createStore } from 'redux';
-import { combineReducers } from 'redux';
+/* global window: true */
+import { createStore, combineReducers } from 'redux';
 import reducer from './reducers/reducer';
-
-const reduxDevTools =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 export default createStore(
   combineReducers({
-    reducer
+    reducer,
   }),
-  reduxDevTools
+  window.devToolsExtension ? window.devToolsExtension() : f => f,
 );
