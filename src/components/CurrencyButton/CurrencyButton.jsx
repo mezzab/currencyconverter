@@ -35,7 +35,7 @@ class CurrencyButton extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="selectContainer">
                 <Select
                     name="form-field-name"
                     value={this.state.selectedOption}

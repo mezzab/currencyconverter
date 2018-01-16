@@ -7,7 +7,11 @@ body {
     background-color: #00A4BD;
 }
 
-.container {
+body > #root > div {
+    height: 100vh;
+}
+
+.superContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,10 +20,16 @@ body {
     padding: 2em;
 }
 
+.logicContainer {
+    padding: 3em 0;
+}
+
 .currencyBox {
     display: flex;
     width: 100%;
-    max-width: 200px;
+    max-width: 300px;
+    align-items: center;
+    padding: 3px 0;
 }
 
 .titleBold {
@@ -33,4 +43,32 @@ body {
     color: #FFFFFF;
     font-size: 32px;
     margin: 0;
+}
+
+.input {
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    line-height: 34px;
+    padding-left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0px 4px 4px 0px;
+    border-spacing: 0;
+    border-collapse: separate;
+    color: #333;
+    cursor: default;
+    display: table;
+    height: 36px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.select {
+
+}
+
+.selectContainer {
+
 }
