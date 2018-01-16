@@ -1,31 +1,20 @@
-import { GET_INITIAL_DATA, REVERSE_CURRENCY, CHANGE_AMOUNT, CHANGE_PRIMARY_CURRENCY, CHANGE_SECONDARY_CURRENCY } from './types';
+import { START_APP, GET_INITIAL_DATA, REVERSE_CURRENCY, CHANGE_AMOUNT, CHANGE_PRIMARY_CURRENCY, CHANGE_SECONDARY_CURRENCY } from './types';
+import { makeRequestActionCreator, makeActionCreator } from '../utils/reduxActions';
 
-export const getInitialData = () => ({
-  type: GET_INITIAL_DATA,
-});
+export const startApp = makeActionCreator(START_APP);
 
-const reverseCurrency = () => ({
-  type: REVERSE_CURRENCY,
-});
+export const getInitialData = makeRequestActionCreator(GET_INITIAL_DATA);
 
-export const changeAmount = amount => ({
-  type: CHANGE_AMOUNT,
-  amount,
-});
+export const reverseCurrency = makeActionCreator(REVERSE_CURRENCY);
 
-export const changePrimaryCurrency = currency => ({
-  type: CHANGE_PRIMARY_CURRENCY,
-  currency,
-});
+export const changeAmount = makeActionCreator(CHANGE_AMOUNT, 'amount');
 
-export const changeSecondaryCurrency = currency => ({
-  type: CHANGE_SECONDARY_CURRENCY,
-  currency,
-});
+export const changePrimaryCurrency = makeActionCreator(CHANGE_PRIMARY_CURRENCY, 'currency');
+
+export const changeSecondaryCurrency = makeActionCreator(CHANGE_SECONDARY_CURRENCY, 'currency');
 
 export default {
-  reverseCurrency,
-  changeAmount,
-  changePrimaryCurrency,
-  changeSecondaryCurrency,
+  startApp,
+  getInitialData,
 };
+

@@ -14,14 +14,13 @@ class App extends Component {
     }
 
     onPrimaryChange = ({ target: { value } }) => {
-
-        services.latest().then(({ data: { rates } }) => {
-            this.setState({
-                secondaryValue: rates.ARS * value,
-                })
-        })
-            .catch(err => err)
-
+        //
+        // services.latest().then(({ data: { rates } }) => {
+        //     this.setState({
+        //         secondaryValue: rates.ARS * value,
+        //         })
+        // })
+        //     .catch(err => err)
     };
 
 

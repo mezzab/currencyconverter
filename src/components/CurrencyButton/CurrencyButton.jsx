@@ -6,27 +6,32 @@ import services  from '../../services/request.js';
 
 class CurrencyButton extends Component {
     static propTypes = {
+        startApp: PropTypes.func.isRequired,
         selectedOption: PropTypes.object,
+        conversions: PropTypes.object,
     };
 
     static defaultProps = {
         selectedOption: { label: 'USD' },
+        conversions: { USD: 1 },
     };
 
     state = {
         selectedOption: this.props.selectedOption,
-        data: [],
+        labels: [],
     };
 
     componentWillMount = () => {
-        services.currecies().then(response => {
-            const data = [];
-            Object.keys(response.data).map((label,i) => {
-                data[i] = { label };
-            });
-            this.setState({ data })
-        })
-            .catch(err => err)
+        this.props.startApp();
+    };
+
+    componentWillReceiveProps = nextProps => {
+        const labels = [];
+        Object.keys(nextProps.conversions).map((label,i) => {
+            labels[i] = { label };
+        });
+        debugger;
+        this.setState({ labels })
     };
 
     handleChange = (selectedOption) => {
@@ -34,13 +39,14 @@ class CurrencyButton extends Component {
     };
 
     render() {
+        debugger;
         return (
             <div>
                 <Select
                     name="form-field-name"
                     value={this.state.selectedOption}
                     onChange={this.handleChange}
-                    options={this.state.data}
+                    options={this.state.labels}
                     wrapperStyle={{ width: '100px' }}
                     autoFocus
                     clearable

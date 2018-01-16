@@ -1,4 +1,4 @@
-import { REVERSE_CURRENCY, CHANGE_AMOUNT } from '../actions/types';
+import { GET_INITIAL_DATA, CHANGE_AMOUNT } from '../actions/types';
 
 const initialState = {
   amount: 100,
@@ -12,8 +12,8 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case CHANGE_AMOUNT:
       return { ...state, amount: action.amount || 0 };
-    case REVERSE_CURRENCY:
-      return state;
+    case GET_INITIAL_DATA.SUCCESS:
+      return { ...state, conversions: action.response.data.rates };
     default:
       return state;
   }
