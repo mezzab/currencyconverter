@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 import Title from '../Title';
 
 class App extends Component {
-  test = { value: 'one', label: 'One' };
-
   render() {
     return (
       <div className="container">
         <Title />
-        <CurrencyButton isEditable />
+          <div className="currencyBox">
+              <CurrencyButton />
+          </div>
+          <div className="currencyBox">
+              <CurrencyButton/>
+          </div>
       </div>
     );
   }

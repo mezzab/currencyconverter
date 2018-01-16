@@ -5,6 +5,6 @@ import styles from '../../native/styles';
 
 export default () => (
   <Text style={styles.title}>
-    Currency Converter (iOS)
+    Currency Converter
   </Text>
 );

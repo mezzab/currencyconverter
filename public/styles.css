@@ -4,16 +4,33 @@ html {
 
 body {
     height: 100%;
-    background-color: #009688;
+    background-color: #00A4BD;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 10%;
+    padding: 2em;
+}
+
+.currencyBox {
+    display: flex;
+    width: 100%;
+    max-width: 200px;
+}
+
+.titleBold {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .title {
     color: #FFFFFF;
     font-size: 32px;
-    margin-bottom: 32px;
+    margin: 0;
 }
