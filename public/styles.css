@@ -9,6 +9,8 @@ body {
 
 body > #root > div {
     height: 100vh;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
 .superContainer {
@@ -45,15 +47,15 @@ body > #root > div {
     margin: 0;
 }
 
-.input {
+input {
     width: 100%;
-    margin: 8px 0;
+    margin: 8px -2px;
     box-sizing: border-box;
     line-height: 34px;
     padding-left: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0 4px 4px 0;
     border-spacing: 0;
     border-collapse: separate;
     color: #333;
@@ -62,13 +64,9 @@ body > #root > div {
     height: 36px;
     outline: none;
     overflow: hidden;
-    position: relative;
+    text-align: center;
 }
 
-.select {
-
-}
-
-.selectContainer {
-
+.disabledInput {
+    background-color: #ddebec;
 }
