@@ -1,16 +1,11 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { startApp } from '../../actions/action';
 import CurrencyButton from './CurrencyButton';
 
-function mapStateToProps({ conversions }) {
+function mapStateToProps({ conversions, isLoading }) {
   return {
     conversions,
+    isLoading,
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ startApp }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CurrencyButton);
+export default connect(mapStateToProps, null)(CurrencyButton);

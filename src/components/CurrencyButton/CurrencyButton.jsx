@@ -2,27 +2,22 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import PropTypes from 'prop-types';
-import services  from '../../services/request.js';
 
 class CurrencyButton extends Component {
     static propTypes = {
-        startApp: PropTypes.func.isRequired,
         selectedOption: PropTypes.object,
         conversions: PropTypes.object,
+        isLoading: PropTypes.bool,
+        onChange: PropTypes.func.isRequired,
     };
 
     static defaultProps = {
-        selectedOption: { label: 'USD' },
         conversions: { USD: 1 },
+        isLoading: false,
     };
 
     state = {
-        selectedOption: this.props.selectedOption,
         labels: [],
-    };
-
-    componentWillMount = () => {
-        this.props.startApp();
     };
 
     componentWillReceiveProps = nextProps => {
@@ -30,26 +25,25 @@ class CurrencyButton extends Component {
         Object.keys(nextProps.conversions).map((label,i) => {
             labels[i] = { label };
         });
-        debugger;
-        this.setState({ labels })
+        return this.setState({ labels })
     };
 
     handleChange = (selectedOption) => {
-        this.setState({selectedOption});
+        this.props.onChange(selectedOption.label);
     };
 
     render() {
-        debugger;
         return (
             <div>
                 <Select
                     name="form-field-name"
-                    value={this.state.selectedOption}
+                    value={this.props.selectedOption}
                     onChange={this.handleChange}
                     options={this.state.labels}
                     wrapperStyle={{ width: '100px' }}
+                    clearable={false}
+                    isLoading={this.props.isLoading}
                     autoFocus
-                    clearable
                 />
             </div>
         )}

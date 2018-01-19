@@ -16,10 +16,11 @@ body > #root > div {
 .superContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    margin-top: 2.5em;
     align-items: center;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
 }
 
 .logicContainer {
