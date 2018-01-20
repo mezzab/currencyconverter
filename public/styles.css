@@ -87,3 +87,7 @@ input {
 .arrows {
     color: white;
 }
+
+:global {
+@import "~/react-select/dist/react-select.css";
+}

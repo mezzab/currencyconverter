@@ -1,3 +1,3 @@
-import TitleView from './TitleView';
+import Logo from './Logo';
 
-export default TitleView;
+export default Logo;
