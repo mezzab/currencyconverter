@@ -4,20 +4,20 @@ A currency converter web application.
 
 ## Development
 
-### Installation
+### Installation:
 
 Install dependencies
    ```
    $ yarn install
    ```
    
-### Development build   
+### Development build:   
 Run the web application with hot reload
    ```
 $ yarn start-web
    ```
 
-### Running linting process
+### Running linting process:
 This ensure we follow the styleguide.
    ```
 $ yarn run lint
