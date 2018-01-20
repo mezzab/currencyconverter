@@ -15,7 +15,7 @@ Run the web application with hot reload
    ```
    yarn start-web
    ```
-Run the mobile application with hot reload
+Run thNe mobile application with hot reload
    ```
    yarn start-native
    ```

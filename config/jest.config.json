@@ -1,0 +1,13 @@
+{
+  "testRegex": ".*.spec.js$",
+  "testEnvironment": "jsdom",
+  "rootDir": "../src",
+  "modulePaths": [
+    "src/"
+  ],
+  "coverageDirectory": "../test-results",
+  "coveragePathIgnorePatterns": [
+    "/node_modules"
+  ],
+  "setupTestFrameworkScriptFile": "../config/test-setup.js"
+}

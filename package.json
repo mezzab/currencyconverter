@@ -6,10 +6,16 @@
     "start-native": "node node_modules/react-native/local-cli/cli.js start",
     "start-web": "react-scripts start",
     "lint": "eslint src",
-    "lint:fix": "eslint src/ --fi"
+    "lint:fix": "eslint src/ --fi",
+    "test": "jest --env=node --config ./config/jest.config.json"
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint-config-react-app": "^2.0.1",
     "prop-types": "^15.5.10",
     "react": "16.2.0",
@@ -17,7 +23,6 @@
     "react-native": "0.41.2",
     "react-native-button": "^1.7.1",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
     "react-select": "^1.1.0",
     "redux": "^3.6.0",
     "redux-saga": "^0.16.0",
@@ -27,7 +32,7 @@
   "devDependencies": {
     "babel-cli": "^6.22",
     "babel-core": "^6.22",
-    "babel-jest": "18.0.0",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^6.2",
     "babel-plugin-transform-object-assign": "^6.22",
     "babel-preset-react-native-stage-0": "^1.0.1",
@@ -39,7 +44,7 @@
     "eslint-plugin-react": "^7.5.1",
     "gulp": "^3.9.1",
     "gulp-webserver": "^0.9.1",
-    "jest": "18.1.0",
+    "jest": "^22.1.4",
     "react-fontawesome": "^1.6.1",
     "react-test-renderer": "15.4.2",
     "webpack": "^2.2",
