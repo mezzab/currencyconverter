@@ -13,7 +13,7 @@ Install dependencies
    
 ### Development build   
 Run the web application with hot reload
-```
+   ```
 $ yarn start-web
    ```
    
@@ -22,15 +22,15 @@ Get the extension from [Chrome Web Store](https://chrome.google.com/webstore/det
 
 ### Running linting process
 This ensure we follow the styleguide.
-```
+   ```
 $ yarn run lint
-```
+   ```
 
 - ESLint — [.eslintrc](./.eslintrc)
 
 
 ### Testing the project:
 Generate test reports.
-```sh
+   ```
 $ yarn run test
-```
+   ```
