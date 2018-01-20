@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start-native": "node node_modules/react-native/local-cli/cli.js start",
     "start-web": "react-scripts start",
     "lint": "eslint src",
     "lint:fix": "eslint src/ --fi",
@@ -20,8 +19,6 @@
     "prop-types": "^15.5.10",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-native": "0.41.2",
-    "react-native-button": "^1.7.1",
     "react-redux": "^5.0.6",
     "react-scripts": "^1.1.0",
     "react-select": "^1.1.0",
@@ -37,7 +34,6 @@
     "babel-jest": "^22.1.0",
     "babel-loader": "^6.2",
     "babel-plugin-transform-object-assign": "^6.22",
-    "babel-preset-react-native-stage-0": "^1.0.1",
     "del": "^2.2",
     "es6-promise": "^4.0.5",
     "eslint-config-airbnb": "^16.1.0",
@@ -52,8 +48,5 @@
     "webpack": "^2.2",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-stream": "^3.2"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }

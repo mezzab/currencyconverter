@@ -1,6 +1,6 @@
 # CurrencyConverter
 
-A cross-plataform currency converter application.
+A currency converter web application.
 
 ## Development
 
@@ -14,10 +14,6 @@ Install dependencies
 Run the web application with hot reload
 ```sh
 $ yarn start-web
-   ```
-Run thNe mobile application with hot reload
-```sh
-$ yarn start-native
    ```
 ### Using Redux DevTools:
 Get the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
