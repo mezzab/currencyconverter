@@ -3,7 +3,6 @@ import { START_APP,
   CHANGE_SECONDARY_CURRENCY,
   CHANGE_PRIMARY_CURRENCY,
   REVERSE_CURRENCY,
-  CHANGE_AMOUNT,
 } from './actions/types';
 import { getInitialData } from './actions/action';
 import { performRequest } from './utils/sagasHelpers';
