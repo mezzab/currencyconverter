@@ -1,8 +1,10 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 
-export default (props) => (
-    <div className="arrowsContainer" onClick={props.onClick} title="Reverse currencies" >
+const ReverseButton = ({ onClick }) => (
+    <div className="arrowsContainer" onClick={onClick} title="Reverse currencies" >
         <FontAwesome
             className="arrows"
             name="long-arrow-down"
@@ -15,3 +17,14 @@ export default (props) => (
         />
     </div>
 );
+
+
+ReverseButton.propTypes = {
+    onClick: PropTypes.func,
+};
+
+ReverseButton.defaultProps = {
+    onClick: () => swal('Oops', 'Something went wrong!', 'error'),
+};
+
+export default ReverseButton;

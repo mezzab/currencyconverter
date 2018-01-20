@@ -20,9 +20,7 @@ describe('<ReverseButton />', () => {
 
   it('Should render ReverseButton with onChange prop', () => {
     const container = reverseButton.find('.arrowsContainer');
-    const {
-      onClick,
-    } = container.props();
+    const { onClick } = container.props();
     expect(onClick).toBe(onClickProp);
   });
 
