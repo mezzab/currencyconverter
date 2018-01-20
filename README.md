@@ -16,9 +16,6 @@ Run the web application with hot reload
    ```
 $ yarn start-web
    ```
-   
-### Using Redux DevTools:
-Get the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 
 ### Running linting process
 This ensure we follow the styleguide.
@@ -34,3 +31,5 @@ Generate test reports.
    ```
 $ yarn run test
    ```
+### Using Redux DevTools:
+Get the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
