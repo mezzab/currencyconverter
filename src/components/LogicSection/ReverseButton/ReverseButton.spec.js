@@ -13,9 +13,7 @@ describe('<ReverseButton />', () => {
   beforeEach(() => {
     onClickProp = spy();
 
-    reverseButton = shallow(<ReverseButton
-      onClick={onClickProp}
-    />);
+    reverseButton = shallow(<ReverseButton onClick={onClickProp} />);
   });
 
   it('Should render ReverseButton with onChange prop', () => {

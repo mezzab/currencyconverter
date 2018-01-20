@@ -1,7 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import swal from 'sweetalert';
 
-
 export function* performRequest(service, requestActionCreator) {
   yield put(requestActionCreator.pending);
   try {

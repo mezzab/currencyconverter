@@ -1,5 +1,6 @@
 import { call, takeLatest } from 'redux-saga/effects';
-import { START_APP,
+import {
+  START_APP,
   CHANGE_SECONDARY_CURRENCY,
   CHANGE_PRIMARY_CURRENCY,
   REVERSE_CURRENCY,
@@ -7,7 +8,6 @@ import { START_APP,
 import { getInitialData } from './actions/action';
 import { performRequest } from './utils/sagasHelpers';
 import services from './services/request';
-
 
 export function* getLatest() {
   yield call(performRequest, services.latest, getInitialData);

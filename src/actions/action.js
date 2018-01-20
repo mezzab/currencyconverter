@@ -1,4 +1,11 @@
-import { START_APP, GET_CONVERSIONS, REVERSE_CURRENCY, CHANGE_AMOUNT, CHANGE_PRIMARY_CURRENCY, CHANGE_SECONDARY_CURRENCY } from './types';
+import {
+  START_APP,
+  GET_CONVERSIONS,
+  REVERSE_CURRENCY,
+  CHANGE_AMOUNT,
+  CHANGE_PRIMARY_CURRENCY,
+  CHANGE_SECONDARY_CURRENCY,
+} from './types';
 import { makeRequestActionCreator, makeActionCreator } from '../utils/reduxActions';
 
 export const startApp = makeActionCreator(START_APP);
@@ -17,4 +24,3 @@ export default {
   startApp,
   getInitialData,
 };
-
