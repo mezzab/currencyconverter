@@ -23,9 +23,9 @@ class CurrencyButton extends Component {
     componentWillReceiveProps = nextProps => {
         const labels = [];
         Object.keys(nextProps.conversions).map((label,i) => {
-            labels[i] = { label };
+            return labels[i] = { label };
         });
-        return this.setState({ labels })
+        this.setState({ labels })
     };
 
     handleChange = (selectedOption) => {

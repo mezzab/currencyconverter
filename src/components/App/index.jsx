@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import store from '../../store';
-import AppView from './AppView.container';
+import AppView from './AppView';
 
-export default class AppContainer extends React.Component {
+export default class AppContainer extends Component {
   render() {
     return (
       <Provider store={store}>

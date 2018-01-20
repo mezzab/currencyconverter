@@ -5,9 +5,10 @@ import {
   CHANGE_SECONDARY_CURRENCY,
   REVERSE_CURRENCY,
 } from '../actions/types';
+import { calculateSecondary } from '../utils/utils'
 
 const initialState = {
-  amount: 0,
+  amount: '',
   primaryCurrency: 'USD',
   secondaryCurrency: 'ARS',
   conversions: {},
@@ -18,7 +19,7 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case CHANGE_AMOUNT:
-      return { ...state, amount: action.amount || 0 };
+      return { ...state, amount: action.amount || '' };
     case GET_CONVERSIONS.PENDING:
       return { ...state, isLoading: true };
     case GET_CONVERSIONS.SUCCESS:
@@ -32,10 +33,15 @@ export default function (state = initialState, action) {
     case CHANGE_SECONDARY_CURRENCY:
       return { ...state, secondaryCurrency: action.currency };
     case REVERSE_CURRENCY:
-      return {
+        const { conversions, primaryCurrency, secondaryCurrency, amount } = state;
+        const secondaryValue = calculateSecondary(conversions, primaryCurrency, secondaryCurrency, amount);
+        debugger;
+
+        return {
         ...state,
         primaryCurrency: state.secondaryCurrency,
-        secondaryCurrency: state.primaryCurrency
+        secondaryCurrency: state.primaryCurrency,
+        amount: secondaryValue,
       };
     default:
       return state;

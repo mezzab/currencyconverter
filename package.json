@@ -12,17 +12,17 @@
     "axios": "^0.17.1",
     "eslint-config-react-app": "^2.0.1",
     "prop-types": "^15.5.10",
-    "react": "15.4.2",
-    "react-dom": "15.4",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "react-native": "0.41.2",
     "react-native-button": "^1.7.1",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "react-select": "^1.1.0",
-    "react-select-2": "^2.0.11",
-    "redux": "^3.7.2",
+    "redux": "^3.6.0",
     "redux-saga": "^0.16.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "sweetalert": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22",
