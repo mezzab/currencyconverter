@@ -23,10 +23,12 @@
     "react-native": "0.41.2",
     "react-native-button": "^1.7.1",
     "react-redux": "^5.0.6",
+    "react-scripts": "^1.1.0",
     "react-select": "^1.1.0",
     "redux": "^3.6.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
+    "sinon": "^4.1.6",
     "sweetalert": "^2.1.0"
   },
   "devDependencies": {

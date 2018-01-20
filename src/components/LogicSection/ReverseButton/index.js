@@ -1,3 +1,3 @@
-import ReverseButton from './ReverseButton'
+import ReverseButton from './ReverseButton';
 
 export default ReverseButton;

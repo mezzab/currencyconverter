@@ -8,7 +8,7 @@ export function* performRequest(service, requestActionCreator) {
     const response = yield call(service);
     yield put(requestActionCreator.success(response));
   } catch (error) {
-    swal ( "Oops" ,  "Something went wrong! Check your connection and try again. ",  "error" )
+    swal('Oops', 'Something went wrong! Check your connection and try again. ', 'error');
     yield put(requestActionCreator.error(error));
   }
 }
